@@ -17,9 +17,17 @@ def get_main(url):
     for l in lang:
         print(l.text)
 
-get_main('https://www.hse.ru/staff/allat')
-get_main('https://www.hse.ru/org/persons/135897')
-get_main('https://www.hse.ru/org/persons/63890353')
+# get_main('https://www.hse.ru/staff/allat')
+# get_main('https://www.hse.ru/org/persons/135897')
+# get_main('https://www.hse.ru/org/persons/63890353')
+# pul_address = ('https://www.hse.ru/staff/allat',
+# 'https://www.hse.ru/org/persons/135897',
+# 'https://www.hse.ru/org/persons/63890353'
+#                )
+
+endpoint = ('135897', '63890353')
+for points in endpoint:
+    get_main(f'https://www.hse.ru/org/persons/{points}')
 
 # print(lang)
 
