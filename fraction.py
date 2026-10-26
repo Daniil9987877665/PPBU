@@ -60,21 +60,24 @@ def handler():
             result = div(n1, d1, n2, d2)
 
         nod = math.gcd(result[0], result[1])
-        n = int(result[0] // nod)
-        d = int(result[1] // nod)
+        n = int(result[0] / nod)
+        d = int(result[1] / nod)
         int_part = ''
         if abs(d) < abs(n):
             int_part = int(n // d)
             n = (n % d)
 
-        if n == 0:
-            n = ''
-            d = ''
-
         if n == d:
             n = ''
             d = ''
             int_part = '1'
+
+
+        if n == 0:
+            n = ''
+            d = ''
+
+
 
         num3.config(text=n)
         den3.config(text=d)
