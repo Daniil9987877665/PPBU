@@ -92,6 +92,7 @@ base2_label = ttk.Label()
 base2_label.pack()
 
 
+
 Label(root, text='Целевая валюта').pack(pady=(8, 0))
 target_combobox = ttk.Combobox(root, values=list(currencies.keys()), state='readonly')
 target_combobox.pack(pady=3, padx=10)
